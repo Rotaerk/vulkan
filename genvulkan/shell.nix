@@ -1,0 +1,1 @@
+(import ./genvulkan.nix).genvulkan.env

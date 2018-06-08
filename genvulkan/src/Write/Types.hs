@@ -115,7 +115,7 @@ writeAllTypes vkXml@VkXml{..}
                       ("Graphics.Vulkan.Types.Struct."
                           <> T.unpack modN
                           -- T.unpack (unVkTypeName
-                          -- $ (name :: VkType -> VkTypeName) t)
+                          --  $ (name :: VkType -> VkTypeName) t)
                       ) mds $ do
         writePragma "Strict"
         writePragma "DataKinds"
