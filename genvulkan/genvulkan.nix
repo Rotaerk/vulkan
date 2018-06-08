@@ -2,7 +2,7 @@ let
   projectName = "genvulkan";
 
   refs = import ./refs.nix;
-  pkgs = import <nixpkgs> {};
+  pkgs = (refs {}).sourceImports.nixpkgs {};
   inherit (refs { inherit pkgs; }) sources sourceImports sourceOverrides relSourceOverrides;
   inherit (pkgs.haskell.lib) overrideCabal doJailbreak;
 
@@ -13,10 +13,6 @@ let
         stylish-haskell = doJailbreak super.stylish-haskell_0_9_0_2;
         hfmt = sourceOverrides.hfmt "0.2.1" super.hfmt;
         haskell-src-exts = super.haskell-src-exts_1_20_2;
-        # template-haskell = super.template-haskell_2_13_0_0;
-        # hfmt = doJailbreak super.hfmt;
-        # hlint = doJailbreak super.hlint;
-        # hindent = doJailbreak super.hindent;
       };
     };
 

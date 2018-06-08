@@ -1,0 +1,7 @@
+{
+  scheme = "github";
+  owner = "NixOS";
+  repo = "nixpkgs";
+  rev = "c40fdcd26c26ffc0832d8d6d7ce671aea075c356";
+  sha256 = "1ln9x7zg0rqpkd56fxx4i6i3sad91js8ma9bz78iy5lw5cp888mv";
+}
